@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <img src="./images/1.gif" alt="" id="m">
+   <img src="./images/2.webp" alt="" id="c">
+   <img src="./images/3.jpg" alt="" id="s">
+    
+    
+</body>
+<script>
+    var now=new Date();
+    var h=now.getHours();
+    function p(){
+        var i=document.getElementById('m');
+        var p=document.getElementById('s');
+        var t=document.getElementById('c');
+
+
+        if(h>6&&h<12){
+            t.style.display='block';
+        }else if(h>12&&h<=18){
+            i.style.display='block';
+        }else if(h>18&&h<24){
+            p.style.display='block';
+        }
+    }
+    p()
+    
+
+   
+
+</script>
+</html>

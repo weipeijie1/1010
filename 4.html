@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .re {
+            color: red;
+        }
+        .co {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="password">请输入密码 (6-16位):</label>
+    <input type="password" id="password" name="password" onblur="mimakuang()">
+    <span id="password1"></span>
+
+    <script>
+        function mimakuang() {
+            var password = document.getElementById('password').value;
+            var Span1 = document.getElementById('password1');
+            if (password.length >= 6 && password.length <= 16) {
+                Span1.textContent = "密码格式正确";
+                Span1.className = "co";
+            } else {
+                Span1.textContent = "密码长度必须在6到16位之间";
+                Span1.className = "re";
+            }
+        }
+    </script>
+
+</body>
+</html>
